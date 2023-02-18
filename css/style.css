@@ -97,6 +97,14 @@ input {
     border-radius: 30px;
     overflow-y: scroll;
   }
+  iframe {
+    width: 120vh;
+    height: calc(85vh - 50px);
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background: white;
+  }
   .slide {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -115,6 +123,7 @@ input {
         -ms-flex-positive: 0.001;
             flex-grow: 0.001;
     position: relative;
+    padding-bottom: 20px;
     -webkit-animation: float-up 0.6s ease;
             animation: float-up 0.6s ease;
   }

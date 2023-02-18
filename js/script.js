@@ -29,7 +29,7 @@ for (let i = 0; i < SECTIONS.length; i++){
 
             if (!p.img) {
 
-                p.img = `https://source.unsplash.com/random/?tech&${unsplash}`
+                p.img = `https://source.unsplash.com/random/?color&${unsplash}`
 
                 unsplash++
             }
@@ -73,8 +73,13 @@ for (let i = 0; i < SECTIONS.length; i++){
     `
 
     Id('sections').innerHTML = Id('sections').innerHTML + section
+
+
 }
 
+console.log(SECTIONS)
+
+console.log('yo')
 
 
 /*
@@ -190,7 +195,7 @@ let frame =
 
 
 
-            <div class = 'slide-header'>
+            <div class = 'slide-header frame-header'>
 
                 <div class = 'url'>
                     <h3> stan.store </h3>
@@ -203,7 +208,7 @@ let frame =
 
             </div>
 
-            <iframe src = 'https://drive.google.com'>
+            <iframe src = 'https://heewon.site/'>
 
 `
 

@@ -75,7 +75,7 @@ let PRODUCTS = [
         price: 49,
         discount: 29,
         rating: 5.0,
-        img: 'assets/mountains.png',
+        img: '',
         url: '#'
     },
     {
@@ -86,7 +86,7 @@ let PRODUCTS = [
         price: 49,
         discount: 29,
         rating: 5.0,
-        img: 'assets/mountains.png',
+        img: '',
         url: '#'
     },
     {
@@ -97,11 +97,10 @@ let PRODUCTS = [
         price: 49,
         discount: 29,
         rating: 5.0,
-        img: 'assets/mountains.png',
+        img: '',
         url: '#'
     }
 ]
-
 
 let SECTIONS = [
 

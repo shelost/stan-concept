@@ -92,6 +92,19 @@ input{
     }
 
 
+    .frame{
+    }
+
+    iframe{
+        width: 120vh;
+        height: calc(85vh - 50px);
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        background: white;
+    }
+
+
 
     .slide{
         display: flex;
@@ -100,6 +113,7 @@ input{
         justify-content: center;
         flex-grow: 0.001;
         position: relative;
+        padding-bottom: 20px;
 
         animation: float-up 0.6s ease;
     }

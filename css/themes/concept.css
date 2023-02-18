@@ -1,3 +1,7 @@
+#main.concept {
+  background: #f3f3f8;
+}
+
 .concept {
   padding-left: 0;
   overflow-y: hidden;
@@ -7,7 +11,6 @@
   background: #fdfdff;
   color: black;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  padding-bottom: 50px;
   -webkit-box-shadow: 0px 60px 100px rgba(27, 28, 62, 0.1);
           box-shadow: 0px 60px 100px rgba(27, 28, 62, 0.1);
 }
@@ -18,9 +21,11 @@
 .concept input:-webkit-autofill:active {
   height: 48px;
   padding: 0 15px;
-  background: rgba(0, 0, 0, 0.1);
-  color: white;
+  background: rgba(0, 0, 0, 0.05);
+  color: black;
   border-radius: 10px;
+  font-size: 16px;
+  font-weight: 300;
   -webkit-box-flex: 1;
           flex: 1;
 }
@@ -30,9 +35,10 @@
   -webkit-box-shadow: none;
           box-shadow: none;
   height: 100vh;
-  width: 45vw;
-  padding-top: 50px;
-  margin-left: -50px;
+  width: 600px;
+  padding-top: 80px;
+  margin-left: -20px;
+  padding-right: 50px;
 }
 
 .concept #store .header {
@@ -52,8 +58,8 @@
 }
 
 .concept #store .header .mast .pfp {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   aspect-ratio: 1 !important;
   background-image: url("../../assets/girl.jpg");
   background-size: cover;
@@ -89,10 +95,10 @@
 
 .concept #store .header .bio {
   font-family: 'Inter', sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 150%;
-  font-weight: 300;
-  margin: 25px 0;
+  font-weight: 400;
+  margin: 30px 0;
 }
 
 .concept #store .header .magnet {
@@ -100,18 +106,20 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 
 .concept #store .header .magnet input, .concept #store .header .magnet input:-webkit-autofill,
 .concept #store .header .magnet input:-webkit-autofill:hover,
 .concept #store .header .magnet input:-webkit-autofill:focus,
 .concept #store .header .magnet input:-webkit-autofill:active {
-  height: 48px;
+  height: 52px;
   padding: 0 15px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
+  background: white;
+  color: black;
   border-radius: 10px;
+  font-size: 16px;
+  font-weight: 300;
   -webkit-box-flex: 1;
           flex: 1;
 }
@@ -119,16 +127,30 @@
 .concept #store .header .magnet button {
   padding: 0 20px;
   border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #6354ff;
+  -webkit-box-shadow: 0 5px 20px rgba(99, 84, 255, 0.2);
+          box-shadow: 0 5px 20px rgba(99, 84, 255, 0.2);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  width: 140px;
+}
+
+.concept #store .header .magnet button:hover {
+  width: 160px;
+  background: #5200FF;
 }
 
 .concept #store .section {
   margin-top: 50px;
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 
 .concept #store .section .section-title {
-  font-size: 20px;
+  margin-left: 3%;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 0px;
   margin-bottom: 35px;
@@ -143,12 +165,15 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 6%;
+  gap: 0%;
 }
 
 .concept #store .grid .card {
-  width: 47%;
+  cursor: pointer;
+  width: 44%;
   margin-bottom: 20px;
+  padding: 3%;
+  border-radius: 20px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
@@ -156,33 +181,60 @@
 .concept #store .grid .card .thumbnail {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 25px;
+  border-radius: 20px;
   background-size: cover;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
 
 .concept #store .grid .card .expo h3 {
-  margin-top: 15px;
+  margin-top: 20px;
   margin-bottom: 10px;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.2px;
 }
 
 .concept #store .grid .card .expo p {
   font-family: 'Inter';
   margin: 0;
-  font-size: 12px;
-  line-height: 140%;
-  font-weight: 200;
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.concept #store .grid .card:hover {
+  animation: rattle 0.2s alternate-reverse infinite ease-in-out;
 }
 
 .concept #store .grid .card:hover .thumbnail {
-  -webkit-transform: translateY(-5px) scale(1.02);
-          transform: translateY(-5px) scale(1.02);
+  -webkit-transform: translateY(-40px) scale(1.02);
+          transform: translateY(-40px) scale(1.02);
+}
+
+@-webkit-keyframes rattle {
+  from {
+    -webkit-transform: rotate(-0.5deg);
+            transform: rotate(-0.5deg);
+  }
+  to {
+    -webkit-transform: rotate(0.5deg);
+            transform: rotate(0.5deg);
+  }
+}
+
+@keyframes rattle {
+  from {
+    -webkit-transform: rotate(-0.5deg);
+            transform: rotate(-0.5deg);
+  }
+  to {
+    -webkit-transform: rotate(0.5deg);
+            transform: rotate(0.5deg);
+  }
 }
 
 .concept #store .grid .price-row {
@@ -191,13 +243,14 @@
 
 .concept #store .grid .price-row .price {
   margin: 0;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
   color: #6354ff;
 }
 
 .concept #store .stack .card {
-  width: 100%;
+  width: 95%;
+  margin: auto;
   margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -205,21 +258,21 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 20px;
 }
 
 .concept #store .stack .card .thumbnail {
-  width: 50px;
+  width: 80px;
   aspect-ratio: 1;
-  border-radius: 8px;
+  border-radius: 15px;
   background-size: cover;
-  margin-right: 10px;
 }
 
 .concept #store .stack .card .expo h3 {
   margin: 0;
-  margin-bottom: 5px;
-  font-size: 16px;
-  font-weight: 300;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .concept #store .stack .card .expo p {
@@ -232,8 +285,8 @@
 
 .concept #store .stack .card .price-row .price {
   margin: 0;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   color: #6354ff;
 }
 
