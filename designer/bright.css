@@ -104,7 +104,7 @@
 .bright #store .header.large .mast .pfp {
   width: 160px;
   aspect-ratio: 1 !important;
-  background-image: url("../../assets/girl.jpg");
+  background-image: url("../../assets/baby.png");
   background-size: cover;
   border-radius: 50%;
 }
@@ -129,11 +129,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
-.bright #store .header.large .mast .expo .socials img {
+.bright #store .header.large .mast .expo .socials svg {
   width: 28px;
+  height: 28px;
+}
+
+.bright #store .header.large .mast .expo .socials svg path {
+  fill: var(--theme-primary-color);
 }
 
 .bright #store .header.large .bio {
@@ -159,7 +164,7 @@
   width: 70px;
   height: 70px;
   aspect-ratio: 1 !important;
-  background-image: url("../../assets/girl.jpg");
+  background-image: url("../../assets/baby.png");
   background-size: cover;
   border-radius: 50%;
 }
@@ -181,11 +186,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 15px;
+  margin-left: 3px;
 }
 
-.bright #store .header.compact .mast .expo .socials img {
-  width: 28px;
+.bright #store .header.compact .mast .expo .socials svg {
+  width: 24px;
+  height: 24px;
+}
+
+.bright #store .header.compact .mast .expo .socials svg path {
+  fill: var(--theme-primary-color);
 }
 
 .bright #store .header.compact .bio {
@@ -233,11 +244,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
 }
 
-.bright #store .header.text .mast .expo .socials img {
+.bright #store .header.text .mast .expo .socials svg {
   width: 28px;
+  height: 28px;
+}
+
+.bright #store .header.text .mast .expo .socials svg path {
+  fill: var(--theme-primary-color);
 }
 
 .bright #store .header.text .bio {
@@ -295,6 +314,7 @@
   margin-bottom: 20px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  overflow: visible;
 }
 
 .bright #store .product-grid .thumbnail {
@@ -579,7 +599,7 @@
   width: 100%;
   margin-bottom: 20px;
   padding: 15px;
-  width: calc(100% - 40px);
+  width: calc(100% - 30px);
   border: 0.5px solid var(--theme-secondary-color);
 }
 

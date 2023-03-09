@@ -1,6 +1,6 @@
 
 let OPTIONS = {
-    theme: ['Brock', 'Kels', 'Minima','Moderno'],
+    theme: ['Brock', 'Kels', 'Minima','Moderno', 'Neon', 'Red'],
     font: ['Inter', 'Plus Jakarta Sans', 'Rubik', 'Baskerville', 'Optima'],
     primary: '#6355ff',
     secondary: '#F9FFFF',
@@ -44,7 +44,7 @@ let T =
     Kels: {
         font: 4,
         primary: '#000000',
-        secondary: '#F1E4E6',
+        secondary: '#FFE5FA',
         border: 1,
         shadow: 1,
         header: 1,
@@ -66,12 +66,34 @@ let T =
     Moderno: {
         font: 1,
         primary: '#000000',
-        secondary: '#FFFFFF',
+        secondary: '#F0F0F0',
         border: 1,
         shadow: 2,
         header: 2,
         round: 1,
         card: 1,
+        grid: 1,
+    },
+    Neon: {
+        font: 3,
+        primary: '#33FF4C',
+        secondary: '#000000',
+        border: 2,
+        shadow: 2,
+        header: 2,
+        round: 2,
+        card: 3,
+        grid: 1,
+    },
+    Red: {
+        font: 5,
+        primary: '#FFCE00',
+        secondary: '#6F001D',
+        border: 2,
+        shadow: 2,
+        header: 1,
+        round: 1,
+        card: 2,
         grid: 1,
     }
 }

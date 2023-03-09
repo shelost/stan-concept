@@ -113,7 +113,7 @@ let SECTIONS = [
     {
         id: 1,
         title: 'Featured Products 📈',
-        products: [1, 2, 3],
+        products: [1],
         layout: 'cards'
     },
     {
