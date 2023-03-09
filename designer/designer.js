@@ -9,7 +9,7 @@ let OPTIONS = {
     header: ['large', 'compact', 'text'],
     round: ['square', 'round', 'pill'],
     card: ['large', 'compact', 'stretch'],
-    grid: ['large', 'compact', 'carousel'],
+    grid: ['large', 'compact'],
 
 }
 
