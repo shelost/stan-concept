@@ -26,120 +26,6 @@ let OPTION = {
     card: 3,
     grid: 1,
 }
-
-
-let T =
-{
-    Brock: {
-        font: 3,
-        primary: '#000000',
-        secondary: '#FFCE00',
-        border: 2,
-        shadow: 2,
-        header: 3,
-        round: 1,
-        card: 3,
-        grid: 1,
-    },
-    Kels: {
-        font: 4,
-        primary: '#000000',
-        secondary: '#FFE5FA',
-        border: 1,
-        shadow: 1,
-        header: 4,
-        round: 1,
-        card: 3,
-        grid: 1,
-        meta: {
-            pfp: 'assets/kels.jpeg',
-            name: 'Kelsie',
-            bio: 'Hello!'
-        }
-    },
-    Minima: {
-        font: 1,
-        primary: '#6355FF',
-        secondary: '#FFFFFF',
-        border: 1,
-        shadow: 2,
-        header: 1,
-        round: 2,
-        card: 2,
-        grid: 1,
-        meta: {
-            pfp: 'assets/jayhoovy.jpeg',
-            name: 'Kelsie',
-            bio: 'Hello!'
-        }
-    },
-    Moderno: {
-        font: 1,
-        primary: '#6355FF',
-        secondary: '#FFFFFF',
-        border: 1,
-        shadow: 2,
-        header: 2,
-        round: 1,
-        card: 1,
-        grid: 1,
-    },
-    Stone: {
-        font: 2,
-        primary: '#04FF00',
-        secondary: '#000000',
-        border: 2,
-        shadow: 2,
-        header: 4,
-        round: 1,
-        card: 2,
-        grid: 1,
-        meta: {
-            pfp: 'assets/stone.jpeg',
-            name: 'Kelsie',
-            bio: 'Hello!'
-        }
-    },
-    Eclipse: {
-        font: 2,
-        primary: '#DEDBFF',
-        secondary: '#8000FF',
-        border: 2,
-        shadow: 2,
-        header: 1,
-        round: 1,
-        card: 1,
-        grid: 1,
-    },
-
-
-
-    /////
-    Neon: {
-        font: 3,
-        primary: '#33FF4C',
-        secondary: '#000000',
-        border: 2,
-        shadow: 2,
-        header: 4,
-        round: 2,
-        card: 3,
-        grid: 1,
-    },
-    Red: {
-        font: 5,
-        primary: '#FFCE00',
-        secondary: '#6F001D',
-        border: 2,
-        shadow: 2,
-        header: 1,
-        round: 1,
-        card: 2,
-        grid: 1,
-    }
-}
-
-
 function createControls() {
 
     let div = ``
@@ -204,14 +90,6 @@ createControls()
 
 
 function applyOptions() {
-
-
-    for (const k in OPTION) {
-        let v = OPTION[k]
-        let l = OPTIONS[k]
-
-        let name = l[v - 1]
-    }
 
 
     // Font
@@ -301,6 +179,9 @@ function filterColor(hex) {
 
 
 
+// Whether to apply custom pics & name
+let META = true
+
 let DesignerLoop = () => {
 
 
@@ -336,17 +217,26 @@ let DesignerLoop = () => {
             let val = JSON.parse(opt.id.split('-')[2])
             OPTION[prop] = val
 
+
+            // Apply Theme
             if (opt.classList.contains('option-theme')) {
 
                 if (OPTION.theme != null) {
                     let theme_id = OPTION.theme-1
                     let Theme = T[OPTIONS.theme[theme_id]]
 
-
+                    // Copy all styles from theme
                     for (const k in Theme) {
                         OPTION[k] = Theme[k]
                     }
-                    //OPTION.theme = theme_id
+
+                    if (Theme.meta && META) {
+                        Id('pfp').style.backgroundImage = `url(${Theme.meta.pfp})`
+                        Id('name').innerHTML = Theme.meta.name
+                    } else {
+                        Id('pfp').style.backgroundImage = `url(assets/baby.png)`
+                        Id('name').innerHTML = 'Heewon Ahn'
+                    }
 
                     Id('input-primary').value = OPTION.primary
                     Id('input-secondary').value = OPTION.secondary
@@ -356,16 +246,11 @@ let DesignerLoop = () => {
 
                 OPTION.theme = null
 
-
             }
-
 
             createControls()
         }
-
-
     }
-
 
     window.requestAnimationFrame(DesignerLoop)
 }

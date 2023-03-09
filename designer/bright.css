@@ -15,7 +15,7 @@
   padding-bottom: 50px;
   -webkit-box-shadow: 0px 60px 100px rgba(27, 28, 62, 0.25);
           box-shadow: 0px 60px 100px rgba(27, 28, 62, 0.25);
-  border: 0.1px solid var(--theme-primary-color);
+  border: 0.1px solid #505050;
 }
 
 .bright button {
@@ -114,7 +114,7 @@
 .bright #store .header.banner .mast .pfp {
   width: calc(100% + 50px);
   aspect-ratio: 2;
-  background-image: url("baby.png");
+  background-image: url("assets/baby.png");
   background-size: cover;
 }
 
@@ -182,7 +182,7 @@
 .bright #store .header.large .mast .pfp {
   width: 160px;
   aspect-ratio: 1 !important;
-  background-image: url("baby.png");
+  background-image: url("assets/baby.png");
   background-size: cover;
   border-radius: 50%;
 }
@@ -247,7 +247,7 @@
   width: 70px;
   height: 70px;
   aspect-ratio: 1 !important;
-  background-image: url("baby.png");
+  background-image: url("assets/baby.png");
   background-size: cover;
   border-radius: 50%;
 }
