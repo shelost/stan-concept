@@ -104,7 +104,7 @@
 .bright #store .header.large .mast .pfp {
   width: 160px;
   aspect-ratio: 1 !important;
-  background-image: url("../../assets/baby.png");
+  background-image: url("baby.png");
   background-size: cover;
   border-radius: 50%;
 }
@@ -164,7 +164,7 @@
   width: 70px;
   height: 70px;
   aspect-ratio: 1 !important;
-  background-image: url("../../assets/baby.png");
+  background-image: url("baby.png");
   background-size: cover;
   border-radius: 50%;
 }
