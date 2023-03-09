@@ -78,13 +78,90 @@
 }
 
 .bright #store .header {
-  width: 90%;
-  padding: 20px 0;
+  width: 100%;
   margin: auto;
+}
+
+.bright #store .header.banner {
+  padding-bottom: 5px;
+  /*
+                .banner{
+                    width: calc(100% + 50px);
+                    aspect-ratio: 2;
+
+                    background: var(--theme-primary-color);
+
+                    transform: translate(-20px, -20px) !important;
+                }
+                */
+}
+
+.bright #store .header.banner .mast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.bright #store .header.banner .mast .pfp {
+  width: calc(100% + 50px);
+  aspect-ratio: 2;
+  background-image: url("baby.png");
+  background-size: cover;
+}
+
+.bright #store .header.banner .mast .expo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.bright #store .header.banner .mast .expo h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.bright #store .header.banner .mast .expo .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+.bright #store .header.banner .mast .expo .socials svg {
+  width: 28px;
+  height: 28px;
+}
+
+.bright #store .header.banner .mast .expo .socials svg path {
+  fill: var(--theme-primary-color);
+}
+
+.bright #store .header.banner .bio {
+  text-align: center;
+  font-family: var(--theme-font), sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 300;
+  margin: 25px 0;
 }
 
 .bright #store .header.large {
   padding-top: 20px;
+  padding-bottom: 5px;
 }
 
 .bright #store .header.large .mast {
@@ -149,6 +226,11 @@
   line-height: 150%;
   font-weight: 300;
   margin: 25px 0;
+}
+
+.bright #store .header.compact {
+  padding: 25px;
+  padding-bottom: 5px;
 }
 
 .bright #store .header.compact .mast {
@@ -225,7 +307,7 @@
 }
 
 .bright #store .header.text .mast .pfp {
-  display: none;
+  width: 0%;
 }
 
 .bright #store .header.text .mast .expo {

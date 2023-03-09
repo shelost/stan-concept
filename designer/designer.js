@@ -1,12 +1,12 @@
 
 let OPTIONS = {
-    theme: ['Brock', 'Kels', 'Minima','Moderno', 'Neon', 'Red'],
+    theme: ['Brock', 'Kels', 'Minima','Moderno', 'Stone', 'Eclipse'],
     font: ['Inter', 'Plus Jakarta Sans', 'Rubik', 'Baskerville', 'Optima'],
     primary: '#6355ff',
     secondary: '#F9FFFF',
     border: [false, true],
     shadow: [false, true],
-    header: ['large', 'compact', 'text'],
+    header: ['large', 'compact', 'text', 'banner'],
     round: ['square', 'round', 'pill'],
     card: ['large', 'compact', 'stretch'],
     grid: ['large', 'compact'],
@@ -21,7 +21,7 @@ let OPTION = {
     secondary: '#F9FFFF',
     border: 1,
     shadow: 2,
-    header: 1,
+    header: 4,
     round: 1,
     card: 3,
     grid: 1,
@@ -47,10 +47,15 @@ let T =
         secondary: '#FFE5FA',
         border: 1,
         shadow: 1,
-        header: 1,
+        header: 4,
         round: 1,
         card: 3,
         grid: 1,
+        meta: {
+            pfp: 'assets/kels.jpeg',
+            name: 'Kelsie',
+            bio: 'Hello!'
+        }
     },
     Minima: {
         font: 1,
@@ -59,14 +64,19 @@ let T =
         border: 1,
         shadow: 2,
         header: 1,
-        round: 3,
+        round: 2,
         card: 2,
         grid: 1,
+        meta: {
+            pfp: 'assets/jayhoovy.jpeg',
+            name: 'Kelsie',
+            bio: 'Hello!'
+        }
     },
     Moderno: {
         font: 1,
-        primary: '#000000',
-        secondary: '#F0F0F0',
+        primary: '#6355FF',
+        secondary: '#FFFFFF',
         border: 1,
         shadow: 2,
         header: 2,
@@ -74,13 +84,44 @@ let T =
         card: 1,
         grid: 1,
     },
+    Stone: {
+        font: 2,
+        primary: '#04FF00',
+        secondary: '#000000',
+        border: 2,
+        shadow: 2,
+        header: 4,
+        round: 1,
+        card: 2,
+        grid: 1,
+        meta: {
+            pfp: 'assets/stone.jpeg',
+            name: 'Kelsie',
+            bio: 'Hello!'
+        }
+    },
+    Eclipse: {
+        font: 2,
+        primary: '#DEDBFF',
+        secondary: '#8000FF',
+        border: 2,
+        shadow: 2,
+        header: 1,
+        round: 1,
+        card: 1,
+        grid: 1,
+    },
+
+
+
+    /////
     Neon: {
         font: 3,
         primary: '#33FF4C',
         secondary: '#000000',
         border: 2,
         shadow: 2,
-        header: 2,
+        header: 4,
         round: 2,
         card: 3,
         grid: 1,
