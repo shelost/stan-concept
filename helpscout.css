@@ -1,0 +1,400 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #131F60;
+letter-spacing: -0.3px;
+/*background: #f6f7ff !important;*/
+}
+
+h1, h2{
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-weight: 600 !important;
+}
+
+h2{
+ font-weight: 800 !important;
+ padding-bottom: 30px;
+ padding-top: 10px;
+}
+
+.popArticles{
+ width: 100%;
+}
+
+.most-pop-articles{
+ max-width: 1000px;
+ width: 100%;
+ margin: auto;
+}
+
+.navbar-inner .container-fluid{
+ position: relative;
+ display: flex;
+ align-items: center;
+ padding: 0;
+ padding-bottom: 25px !important;
+}
+
+.nav{
+ position: static !important;
+}
+
+
+a.contactUs{
+ color: white !important;
+ font-size: 16px !important;
+ font-weight: 400;
+ letter-spacing: 0.1px;
+ font-family: 'Plus Jakarta Sans', sans-serif;
+ border-radius: 10px;
+ position: absolute !important;
+ display: inline !important;
+ right: 0;
+ bottom: 20px;
+ transition: 0.2s ease;
+}
+
+a.contactUs:hover{
+ opacity: 0.8;
+}
+
+
+#docsSearch{
+ padding: 50px;
+ background: #f5fbff;
+ background: #6355ff;
+ background: #EBEDFF;
+ background: #eaecff;
+}
+
+#docsSearch h1{
+ font-weight: 800 !important;
+ margin-bottom: 30px;
+}
+
+.brand{
+ padding-top: 25px !important;
+}
+
+
+.brand img{
+ height: 35px;
+ transform: translateY(5px);
+ width: auto;
+
+}
+
+
+
+#contentArea{
+
+}
+
+a{
+ text-decoration: none !important;
+}
+
+a span{
+ text-decoration: none !important;
+}
+
+.popArticles{
+ gap: 30px;
+
+}
+
+.popArticles li{
+
+ border-radius: 15px;
+ padding: 25px;
+ background: white;
+ margin-bottom: 30px !important;
+ transition: 0.2s ease;
+ box-shadow: 0 10px 40px rgba(0,16,109,0.08), inset 0 -5px 10px rgba(0,0,0,0.02);
+ cursor: pointer;
+
+}
+
+.popArticles li a{
+ padding: 0 !important;
+}
+
+.popArticles li span{
+ font-weight: 500;
+ font-size: 18px;
+ line-height: 140%;
+ color: black !important;
+ padding: 0;
+}
+
+.popArticles li:hover span{
+ color: #6355ff !important;
+}
+
+
+
+.popArticles li:hover{
+ transform: translateY(-5px);
+ box-shadow: 0 15px 40px rgba(0,0,0,0.1), inset 0 -5px 10px rgba(0,0,0,0.02);
+
+}
+
+
+
+.popArticles li i{
+
+ font-size: 18px !important;
+ display: none;
+
+
+}
+
+.popArticles li a span{
+ color: black;
+ transition: 0.2s ease;
+}
+
+.popArticles li a:hover{
+ text-decoration: none !important;
+ color: red;
+}
+
+
+.navbar .navbar-inner {
+ background: #6355ff !important;
+}
+#mainNav {
+ background: white;
+}
+
+
+#searchBar .search-query {
+ background: #fff;
+ border-color: transparent;
+ box-shadow: none;
+ color: #777777;
+ font-size: 16px;
+ box-shadow: 0 40px 50px rgba(0,0,0,0.05);
+ border-radius: 35px;
+ padding: 30px 25px;
+ font-weight: 400;
+ margin-right: 15px;
+}
+
+#searchBar{
+ margin-top: 15px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#searchBar button {
+ background: #6355FF;
+ border-color: transparent;
+ color: #fff;
+transition: 0.2s ease;
+font-size: 16px;
+border-radius: 45px;
+padding: 30px 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-weight: 500;
+position: static;
+
+}
+
+#searchBar button span{
+ display: none;
+}
+
+#searchBar button .icon-search{
+ display: inline;
+ color: white;
+}
+
+#searchBar button:hover {
+ background: #5200FF;
+ border-color: transparent;
+ color: white;
+}
+
+.category-list{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center !important;
+ gap: 10px;
+}
+
+.category{
+ border: none !important;
+ border-radius: 15px;
+ background: #F2F4F8;
+ padding: 30px 0 30px 0 !important;
+ flex-grow: 0;
+ height: fit-content;
+}
+
+.category:hover{
+ background: #e8ecf2 !important;
+}
+
+.category h3{
+ width: 80%;
+ margin: auto;
+ font-weight: 600;
+ letter-spacing: -0.3px;
+
+ text-align: left;
+}
+
+.category p{
+ width: 80%;
+ margin: auto;
+ text-align: left;
+}
+
+
+
+/* Page */
+
+.contentWrapper{
+    border-radius: 15px !important;
+    border: none !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 40px rgba(0,16,109,0.08), inset 0 -5px 10px rgba(0,0,0,0.02);
+}
+
+
+.contentWrapper p{
+    font-size: 16px !important;
+}
+
+
+.row-fluid{
+
+}
+
+.row-fluid a{
+    font-size: 16px !important;
+    font-weight: 400;
+}
+
+
+.search-query {
+    background: #fff;
+    border-color: transparent;
+    box-shadow: none;
+    color: #777777;
+    font-size: 16px !important;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1) !important;
+    border-radius: 35px !important;
+    padding: 30px 25px;
+    font-weight: 400;
+    margin-right: 15px;
+    border: none !important;
+}
+
+#fullArticle .admin-edit{
+    background: #6355FF;
+    color: white !important;
+    padding: 15px 25px;
+    text-shadow: none;
+    border-radius: 40px;
+    border: none;
+    transition: 0.2s ease;
+    margin-top: 20px;
+    margin-bottom: 40px !important;
+}
+
+#fullArticle .admin-edit:hover{
+    background: #5200FF;
+
+}
+
+
+
+@media screen and (max-width: 800px){
+
+
+    .most-pop-articles{
+        max-width: 100%;
+    }
+
+    .popArticles{
+        gap: 10px !important;
+        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .popArticles li{
+        width: 82% !important;
+        padding: 20px;
+        margin-bottom: 15px !important;
+    }
+
+    .popArticles li span{
+        font-size: 16px;
+    }
+
+    #docsSearch{
+        padding: 20px 20px 40px 20px;
+    }
+
+    #searchBar{
+        width: 100% !important;
+        padding: 0;
+    }
+
+
+    #searchBar .search-query {
+
+    }
+
+    .navbar .btn-navbar{
+        display: none;
+    }
+
+    .nav-collapse{
+        display: block !important;
+        overflow: visible !important;
+        height: 20px !important;
+        position: static !important;
+        background-color: red !important;
+    }
+
+    nav{
+        position: static !important;
+        background-color: blue !important;
+    }
+
+    #contactMobile{
+        background-color: blue !important;
+    }
+
+
+    a.contactUs{
+        background-color: red !important;
+        color: white !important;
+        font-size: 16px !important;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        border-radius: 10px;
+        position: absolute !important;
+        display: block !important;
+        width: 100vw;
+        left: 0;
+        top: 50px;
+        transition: 0.2s ease;
+        display: none !important;
+       }
+
+       a.contactUs:hover{
+        opacity: 0.8;
+       }
+
+
+}

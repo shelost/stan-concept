@@ -1,0 +1,710 @@
+
+.bright{
+
+    --light: 20;
+    --threshold: 50;
+
+    --theme-primary-color: #6355FF;
+    --theme-secondary-color: #F9F9F9;
+    --theme-tertiary-color: hsl(245,100%, 46.7%);
+    --theme-font: 'Rubik';
+
+    .screen{
+        --switch: calc((var(--light) - var(--threshold)) * -100%);
+        background: var(--theme-secondary-color);
+        color: hsl(0, 0%, var(--switch));
+        font-family: var(--theme-font), sans-serif;
+        padding-bottom: 50px;
+        box-shadow: 0px 60px 100px rgba(#1B1C3E, 0.1);
+    }
+
+
+    button{
+        font-family: var(--theme-font), sans-serif;
+        outline: none;
+        border: none;
+        background: var(--theme-primary-color);
+        color: white;
+        transition: 0.2s ease;
+        cursor: pointer;
+        &:hover{
+
+        }
+    }
+
+
+
+
+    input, input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus,
+                input:-webkit-autofill:active{
+                    height: 48px;
+                    padding: 0 15px;
+                    background: rgba(black, 0.1);
+                    color: white;
+                    border-radius: 10px;
+                    flex: 1;
+                }
+
+    #store{
+
+
+        .product-cards{
+            background: var(--theme-tertiary-color);
+        }
+        .product-stack{
+            background: var(--theme-tertiary-color);
+        }
+
+
+        &.shadow{
+            .product-cards{
+                box-shadow: 0px 20px 50px rgba(black, 0.15);
+                background: var(--theme-secondary-color);
+            }
+
+            .product-stack{
+                box-shadow: 0px 20px 50px rgba(black, 0.15);
+                background: var(--theme-secondary-color);
+            }
+
+            .product-grid{
+                .thumbnail{
+                    box-shadow: 0px 10px 20px rgba(black, 0.15);
+                }
+            }
+        }
+
+        &.border{
+            .product-cards{
+                border: 0.5px solid var(--theme-primary-color);
+                background: var(--theme-secondary-color);
+            }
+            .product-stack{
+                border: 0.5px solid var(--theme-primary-color);
+                background: var(--theme-secondary-color);
+            }
+        }
+
+
+
+        /// ELEMENTS
+
+        .header{
+            width: 90%;
+            padding: 20px 0;
+            margin: auto;
+
+
+            &.large{
+                padding-top: 20px;
+                .mast{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 15px;
+                    .pfp{
+                        width: 160px;
+                        aspect-ratio: 1 !important;
+                        background-image: url('../../assets/girl.jpg');
+                        background-size: cover;
+                        border-radius: 50%;
+                    }
+
+                    .expo{
+                        width: fit-content;
+
+                        h1{
+                            font-size: 28px;
+                            font-weight: 600;
+                            margin-top: 5px;
+                            margin-bottom: 20px;
+                        }
+                        .socials{
+                            display: flex;
+                            justify-content: center;
+                            gap: 10px;
+                            img{
+                                width: 28px;
+                            }
+                        }
+                    }
+
+                }
+
+                .bio{
+                    text-align: center;
+                    font-family: var(--theme-font), sans-serif;
+                    font-size: 14px;
+                    line-height: 150%;
+                    font-weight: 300;
+                    margin: 25px 0;
+                }
+            }
+
+            &.compact{
+                .mast{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    .pfp{
+                        width: 70px;
+                        height: 70px;
+                        aspect-ratio: 1 !important;
+                        background-image: url('../../assets/girl.jpg');
+                        background-size: cover;
+                        border-radius: 50%;
+                    }
+
+                    .expo{
+                        width: fit-content;
+                        h1{
+                            font-size: 22px;
+                            font-weight: 600;
+                            margin: 0;
+                            margin-bottom: 10px;
+                        }
+                        .socials{
+                            display: flex;
+                            gap: 10px;
+                            img{
+                                width: 28px;
+                            }
+                        }
+                    }
+
+                }
+
+                .bio{
+                    font-family: var(--theme-font), sans-serif;
+                    font-size: 14px;
+                    line-height: 150%;
+                    font-weight: 300;
+                    margin: 25px 0;
+                }
+            }
+
+
+            &.text{
+                .mast{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 15px;
+                    padding-top: 20px;
+                    .pfp{
+                        display: none;
+                    }
+
+                    .expo{
+                        width: fit-content;
+
+
+                        h1{
+                            font-size: 32px;
+                            font-weight: 600;
+                            margin-top: 5px;
+                            margin-bottom: 20px;
+                        }
+                        .socials{
+                            display: flex;
+                            gap: 10px;
+                            img{
+                                width: 28px;
+                            }
+                        }
+                    }
+
+                }
+
+                .bio{
+                    text-align: center;
+                    font-family: var(--theme-font), sans-serif;
+                    font-size: 14px;
+                    line-height: 150%;
+                    font-weight: 300;
+                    margin: 25px 0;
+                }
+            }
+        }
+
+
+        .section{
+
+            margin-top: 50px;
+            width: 90%;
+            margin: auto;
+
+            .section-title{
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0px;
+                margin-bottom: 35px;
+                margin-top: 35px;
+                padding-bottom: 10px;
+                text-align: center;
+
+                border-bottom: 1px solid rgba(white, 0.2);
+            }
+        }
+
+
+        ////////////////////////////  LAYOUTS  ////////////////////////////
+
+        .grid{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6%;
+
+            .price-row{
+                margin-top: 15px;
+                .price{
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: var(--theme-primary-color);
+                }
+            }
+        }
+
+        ////////////////////////////  CARDS  ////////////////////////////
+
+
+
+        .product{
+            overflow: hidden;
+        }
+
+        // Product (Grid)
+        .product-grid{
+            width: 47%;
+            margin-bottom: 20px;
+            transition: 0.2s ease;
+            .thumbnail{
+                width: 100%;
+                aspect-ratio: 1;
+                border-radius: 15px;
+                background-size: cover;
+                transition: 0.2s ease;
+            }
+
+            &.large{
+                .expo{
+                    h3{
+                        margin-top: 15px;
+                        margin-bottom: 10px;
+                        font-size: 16px;
+                        font-weight: 600;
+
+                    }
+                    p{
+                        font-family: var(--theme-font), sans-serif;
+                        margin: 0;
+                        font-size: 12px;
+                        line-height: 140%;
+                        font-weight: 200;
+                    }
+                }
+                .price-row{
+                    margin-top: 10px;
+                    .price{
+                        margin: 0;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: var(--theme-primary-color);
+                    }
+                }
+                .product-button{
+                    display: none;
+                }
+
+            }
+
+            &.compact{
+                .expo{
+                    display: none;
+                }
+                .product-button{
+                    display: none;
+                }
+            }
+
+
+
+            // Roundness
+            &.square{
+                .thumbnail{
+                    border-radius: 5px;
+                }
+            }
+
+            &.round{
+                .thumbnail{
+                    border-radius: 15px;
+                }
+            }
+
+            &.pill{
+                .thumbnail{
+                    border-radius: 30px;
+                }
+            }
+
+        }
+
+
+        // Product (Card)
+        .product-cards{
+            width: calc(100% - 40px);
+            border: 0.5px solid var(--theme-secondary-color);
+
+            // Card - Large
+            &.large{
+                width: 100%;
+                margin-bottom: 20px;
+                .flex{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                .thumbnail{
+                    width: 100%;
+                    aspect-ratio: 1;
+                    background-size: cover;
+                }
+                .expo{
+                    width: 100%;
+                    padding: 20px;
+                    padding-left: 50px;
+
+                    h3{
+                        margin: 0;
+                        margin-bottom: 10px;
+                        font-size: 16px;
+                        font-weight: 600;
+
+                    }
+                    p{
+                        font-size: 14px;
+                        font-weight: 300;
+                        margin: 0;
+                    }
+                }
+
+                .price-row{
+                    margin-top: 10px;
+                    .price{
+                        margin: 0;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: var(--theme-primary-color);
+                    }
+                }
+
+                .product-button{
+                    display: none;
+                }
+
+            }
+
+            // Card - Compact
+
+            &.compact {
+
+                margin-bottom: 20px;
+                padding: 20px;
+
+                .flex{
+                    display: flex;
+                    align-items: flex-start;
+                }
+
+                .thumbnail{
+                    width: 70px;
+                    aspect-ratio: 1;
+                    background-size: cover;
+                    margin-right: 15px;
+                }
+                .expo{
+                    h3{
+                        margin: 0;
+                        margin-bottom: 8px;
+                        font-size: 16px;
+                        font-weight: 600;
+
+                    }
+                    p{
+                        font-size: 14px;
+                        font-weight: 300;
+                        margin: 0;
+                    }
+                }
+
+                .price-row{
+                    margin-top: 5px;
+                    .price{
+                        margin: 0;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: var(--theme-primary-color);
+                    }
+                }
+
+                .product-button{
+
+                    transform: scale(4);
+                    width: 100%;
+                    height: 45px;
+                    margin-top: 15px;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+
+            &.stretch{
+                position: relative;
+                margin-bottom: 20px;
+                padding: 20px;
+
+                .flex{
+                    display: flex;
+                    align-items: flex-start;
+                }
+
+                .thumbnail{
+                    width: 70px;
+                    aspect-ratio: 1;
+                    background-size: cover;
+                    margin-right: 15px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 125px;
+                }
+
+                .expo{
+                    margin-left: 125px;
+                    h3{
+                        margin: 0;
+                        margin-bottom: 8px;
+                        font-size: 16px;
+                        font-weight: 600;
+
+                    }
+                    p{
+                        font-size: 14px;
+                        font-weight: 300;
+                        margin: 0;
+                    }
+                }
+
+                .price-row{
+                    margin-top: 5px;
+                    .price{
+                        margin: 0;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: var(--theme-primary-color);
+                    }
+                }
+
+                .product-button{
+                    margin-left: 125px;
+
+                    width: calc(100% - 125px);
+                    height: 45px;
+                    margin-top: 15px;
+                    font-size: 14px;
+                     font-weight: 600;
+                }
+            }
+
+
+            // Roundness
+            &.square{
+                border-radius: 5px;
+                &.compact{
+                    .thumbnail{
+                        border-radius: 3px;
+                    }
+                }
+
+                .product-button{
+                    border-radius: 3px;
+                }
+            }
+
+            &.round{
+                border-radius: 15px;
+                &.compact{
+                    .thumbnail{
+                        border-radius: 10px;
+                    }
+                }
+                .product-button{
+                    border-radius: 10px;
+                }
+            }
+
+            &.pill{
+                border-radius: 30px;
+                &.compact{
+                    .thumbnail{
+                        border-radius: 15px;
+                    }
+                }
+                .product-button{
+                    border-radius: 40px;
+                }
+            }
+
+        }
+
+
+
+        // Pill
+        .product-stack{
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 15px;
+            width: calc(100% - 40px);
+            border: 0.5px solid var(--theme-secondary-color);
+
+            .flex{
+                display: flex;
+                align-items: center;
+            }
+
+            .thumbnail{
+                width: 50px;
+                aspect-ratio: 1;
+                background-size: cover;
+                margin-right: 15px;
+            }
+            .expo{
+                h3{
+                    margin: 0;
+                    margin-bottom: 5px;
+                    font-size: 16px;
+                    font-weight: 600;
+
+                }
+                p{
+                    display: none;
+                }
+            }
+
+            .price-row{
+                margin-top: 0px;
+                .price{
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: var(--theme-primary-color);
+                }
+            }
+
+            .product-button{
+                display: none;
+            }
+
+            // Roundness
+            &.square{
+                border-radius: 5px;
+                .thumbnail{
+                    border-radius: 3px;
+                }
+                .product-button{
+                    border-radius: 3px;
+                }
+            }
+
+            &.round{
+                border-radius: 15px;
+                .thumbnail{
+                    border-radius: 10px;
+                }
+                .product-button{
+                    border-radius: 10px;
+                }
+            }
+
+            &.pill{
+                border-radius: 60px;
+                .thumbnail{
+                    border-radius: 30px;
+                }
+                .product-button{
+                    border-radius: 40px;
+                }
+            }
+        }
+
+
+
+    }
+
+
+    .checkout{
+
+
+        .banner{
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-image: url('../../assets/mountains.png');
+            background-size: 100% 100%;
+            background-position: 50% 0%;
+        }
+
+        .expo{
+            width: 88%;
+            margin: auto;
+            margin-top: 25px;
+            h1{
+                font-size: 22px;
+                font-weight: 400;
+                margin: 0;
+                margin-bottom: 8px;
+            }
+            h2{
+                font-size: 18px;
+                color: var(--theme-primary-color);
+                margin: 0;
+            }
+        }
+
+        .description{
+            width: 88%;
+            margin: auto;
+            p{
+                width: 100%;
+                font-family: var(--theme-font), sans-serif;
+                font-weight: 200;
+                font-size: 13px;
+                line-height: 170%;
+            }
+        }
+
+
+
+
+    }
+}
+
+@keyframes float-in{
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: none;
+        opacity: 1;
+    }
+}

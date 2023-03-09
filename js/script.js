@@ -18,7 +18,7 @@ for (let i = 0; i < SECTIONS.length; i++){
             <h2 class = 'section-title anim'> ${s.title} <h2>
         </div>
 
-        <div class = 'cards ${s.layout}'>
+        <div class = 'products ${s.layout}'>
 
     `
 
@@ -29,37 +29,42 @@ for (let i = 0; i < SECTIONS.length; i++){
 
             if (!p.img) {
 
-                p.img = `https://source.unsplash.com/random/?color&${unsplash}`
+                p.img = `https://source.unsplash.com/random/?product&${unsplash}`
 
                 unsplash++
             }
 
-            let card =
+            let product =
             `
 
-            <div id = 'product-${p.id}' class = 'card ${p.type}'>
+            <div id = 'product-${p.id}' class = 'product product-${s.layout} ${p.type}'>
 
-                <div class = 'thumbnail anim' style = 'background-image: url(${p.img})'>
-                </div>
-
-                <div class = 'expo'>
-
-                    <h3 class = 'anim'> ${p.title} </h3>
-
-                    <p class = 'anim' > ${p.description} </p>
-
-                    <div class = 'price-row anim'>
-
-                        <h2 class = 'price'> $${p.price} </h2>
-
+                <div class = 'flex'>
+                    <div class = 'thumbnail anim' style = 'background-image: url(${p.img})'>
                     </div>
 
+                    <div class = 'expo'>
+
+                        <h3 class = 'anim'> ${p.title} </h3>
+
+                        <p class = 'anim' > ${p.description} </p>
+
+                        <div class = 'price-row anim'>
+
+                            <h2 class = 'price'> $${p.price} </h2>
+
+                        </div>
+                    </div>
                 </div>
+
+                <button class = 'product-button anim'>
+                    ${p.button}
+                </button>
 
             </div>
             `
 
-            section += card
+            section += product
         }
 
     }
@@ -76,10 +81,6 @@ for (let i = 0; i < SECTIONS.length; i++){
 
 
 }
-
-console.log(SECTIONS)
-
-console.log('yo')
 
 
 /*
@@ -111,10 +112,10 @@ for (let i = 0; i < Class('anim').length; i++){
     t.style.setProperty('--animation-order', counter)
     t.style.transition = '0.2s ease';
     t.style.animationName = 'float-in';
-    t.style.animationDuration = '700ms';
-    t.style.animationDelay = 'calc(var(--animation-order) * 30ms)';
+    t.style.animationDuration = '500ms';
+    t.style.animationDelay = 'calc(var(--animation-order) * 10ms)';
     t.style.animationFillMode = 'both';
-    t.style.animationTimingFunction = 'ease-in-out';
+    t.style.animationTimingFunction = 'ease';
 
     counter++
 }
@@ -145,7 +146,7 @@ let slide =
 
             <div id = 'checkout' class = 'screen checkout'>
 
-                <div class = 'banner' style = 'background-image: url(https://source.unsplash.com/random/?nature&${slider})'>
+                <div class = 'banner' style = 'background-image: url(https://source.unsplash.com/random/?product&${slider})'>
 
                 </div>
 
@@ -213,6 +214,7 @@ let frame =
 `
 
 
+/*
 
 
 Id('plus').onclick = () => {
@@ -238,6 +240,8 @@ Id('plus').onclick = () => {
     slider++
 
 }
+
+
 
 
 
@@ -312,3 +316,6 @@ let loop = () => {
 }
 
 window.requestAnimationFrame(loop)
+
+
+*/

@@ -2,6 +2,10 @@
   background: #f3f3f8;
 }
 
+.tiktok-embed {
+  border-radius: 10px;
+}
+
 .concept {
   padding-left: 0;
   overflow-y: hidden;

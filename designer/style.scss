@@ -12,19 +12,6 @@ body{
     margin: 0;
 }
 
-button{
-    font-family: 'Manrope', sans-serif;
-    outline: none;
-    border: none;
-    background: #0059ff;
-    color: white;
-    transition: 0.2s ease;
-    cursor: pointer;
-    &:hover{
-        background: #003cff;
-    }
-}
-
 ::-webkit-scrollbar{
     display: none;
 }
@@ -34,6 +21,8 @@ input{
     outline: none;
     border: none;
 }
+
+
 
 // Desktop
 
@@ -50,37 +39,14 @@ input{
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 40px;
         overflow-x: scroll;
-        padding: 0 50px;
-    }
-
-
-    #plus{
-        background: rgba(black, 0.1);
-        text-align: center;
-        line-height: 80px;
-        flex-shrink: 0;
-        z-index: 10;
-        font-size: 50px;
-        width: 100px;
-        height: 100px;
-        margin: 50px;
-        margin-right: 100px;
-        font-weight: 400;
-        border-radius: 30px;
-        cursor: pointer;
-        transition: 0.2s ease;
-        &:hover{
-            background: rgba(black, 0.2);
-        }
     }
 
     #slides{
+        width: 100vw;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        gap: 40px;
     }
 
     .screen{
@@ -88,22 +54,9 @@ input{
         height: calc(90vh - 50px);
         border-radius: 20px;
 
+
         overflow-y: scroll;
     }
-
-
-    .frame{
-    }
-
-    iframe{
-        width: 120vh;
-        height: calc(85vh - 50px);
-        border-radius: 30px;
-        outline: none;
-        border: none;
-        background: white;
-    }
-
 
 
     .slide{
@@ -115,7 +68,7 @@ input{
         position: relative;
         padding-bottom: 20px;
 
-        animation: float-up 0.6s ease;
+        animation: float-up 0.4s ease;
     }
 
     .line{
@@ -191,6 +144,64 @@ input{
                 background: none;
                 font-weight: 600;
             }
+        }
+    }
+
+
+
+    #controls{
+
+        box-shadow: 0px 20px 50px rgba(black, 0.1);
+        background: white;
+        padding: 30px 40px;
+        border-radius: 20px;
+        margin-left: 40px;
+
+
+        .control{
+            display: flex;
+            align-items: center;
+
+            h2{
+                font-size: 18px;
+                width: 100px;
+            }
+
+            .row{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .option{
+                    background: rgba(black, 0.08);
+                    padding: 10px 15px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    &.active{
+                        background: #6355FF;
+                        color: white;
+                    }
+                }
+            }
+
+
+            .color{
+                height: 24px;
+                aspect-ratio: 1;
+                border-radius: 50px;
+                background: black;
+                border: 1px solid black;
+            }
+            input{
+                color: black;
+            }
+        }
+
+        #apply{
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-weight: 500;
+            margin-top: 30px;
         }
     }
 

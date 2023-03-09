@@ -12,7 +12,6 @@ function Unsplash() {
 
     setTimeout(() => {
 
-        console.log(arr)
 
     }, 1000);
 
@@ -31,7 +30,8 @@ let PRODUCTS = [
         discount: 29,
         rating: 5.0,
         img: null,
-        url: '#'
+        url: '#',
+        button: 'Get Started'
     },
     {
         id: 2,
@@ -42,7 +42,8 @@ let PRODUCTS = [
         discount: 29,
         rating: 5.0,
         img: null,
-        url: '#'
+        url: '#',
+        button: 'Get Started'
     },
     {
         id: 3,
@@ -53,7 +54,8 @@ let PRODUCTS = [
         discount: 29,
         rating: 5.0,
         img: '',
-        url: '#'
+        url: '#',
+        button: 'Get Started'
     },
     {
         id: 3,
@@ -64,7 +66,8 @@ let PRODUCTS = [
         discount: 29,
         rating: 5.0,
         img: '',
-        url: '#'
+        url: '#',
+        button: 'Get Started'
     },
 
     {
@@ -76,7 +79,8 @@ let PRODUCTS = [
         discount: 29,
         rating: 5.0,
         img: '',
-        url: '#'
+        url: '#',
+        button: 'Get Started'
     },
     {
         id: 5,
@@ -87,7 +91,8 @@ let PRODUCTS = [
         discount: 29,
         rating: 5.0,
         img: '',
-        url: '#'
+        url: '#',
+        button: 'Get Started'
     },
     {
         id: 6,
@@ -98,7 +103,8 @@ let PRODUCTS = [
         discount: 29,
         rating: 5.0,
         img: '',
-        url: '#'
+        url: '#',
+        button: 'Get Started'
     }
 ]
 
@@ -108,6 +114,12 @@ let SECTIONS = [
         id: 1,
         title: 'Featured Products 📈',
         products: [1, 2, 3],
+        layout: 'cards'
+    },
+    {
+        id: 2,
+        title: 'Products',
+        products: [1,2,3],
         layout: 'grid'
     },
     {

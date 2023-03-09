@@ -241,7 +241,6 @@
             background-image: url('../../assets/mountains.png');
             background-size: 100% 100%;
             background-position: 50% 0%;
-            //background-attachment: fixed;
         }
 
         .expo{
@@ -281,7 +280,7 @@
 
 @keyframes float-in{
     0%{
-        transform: translateY(30px) scale(1.5);
+        transform: translateY(30px);
         opacity: 0;
     }
 
