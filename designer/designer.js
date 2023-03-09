@@ -281,6 +281,8 @@ let DesignerLoop = () => {
     Id('color-primary').style.background = primary
     Id('color-secondary').style.background = secondary
 
+    Id('main').style.background = secondary
+
 
     // Controls
 
