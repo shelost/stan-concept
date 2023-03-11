@@ -36,11 +36,32 @@ input{
         width: 100vw;
         height: 100vh;
         background: #eaeaed;
+        background: none;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         overflow-x: scroll;
     }
+
+    @keyframes slider{
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(80);
+        }
+    }
+
+
+    @keyframes slide-up{
+        from{
+            top: 100vh;
+        }
+        to{
+            top: 0;
+        }
+    }
+
 
     #slides{
         width: 100vw;
@@ -56,6 +77,7 @@ input{
 
 
         overflow-y: scroll;
+        overflow-x: hidden;
     }
 
 
@@ -67,9 +89,14 @@ input{
         justify-content: center;
         flex-grow: 0.001;
         position: relative;
-        padding-bottom: 20px;
+
 
         animation: float-up 0.4s ease;
+
+        width: 50vh;
+        height: 100%;
+
+
     }
 
     .line{
@@ -158,28 +185,103 @@ input{
         border-radius: 20px;
         margin-left: 40px;
 
+        width: 600px;
+
+        z-index: 2;
+
+
+
 
         .control{
             display: flex;
-            align-items: center;
+            align-items: flex-start;
 
             margin: 20px;
+
+            &#c-theme{
+                padding-bottom: 15px;
+            }
+
 
             h2{
                 font-size: 14px;
                 width: 100px;
                 font-weight: 400;
+                //margin-bottom: 5px;
+                transform: translateY(-3px);
             }
+
 
             .row{
                 display: flex;
-                align-items: center;
+                flex-wrap: wrap;
+                align-items: flex-start;
                 gap: 10px;
+
                 .option{
                     background: rgba(black, 0.08);
-                    padding: 10px 15px;
+                    padding: 8px 15px;
                     border-radius: 20px;
-                    font-size: 12px;
+                    width: fit-content;
+                    cursor: pointer;
+                    h2{
+                        margin: 0;
+                        font-size: 12px;
+                        width: fit-content;
+                        margin-top: 4px;
+                    }
+                    &.active{
+                        background: #6355FF;
+                        color: white;
+                    }
+                }
+
+                /*
+
+                .option{
+                   // background: rgba(black, 0.08);
+                   // padding: 10px 15px;
+                   // border-radius: 20px;
+
+
+                    cursor: pointer;
+
+
+                    img{
+                        width: 60px;
+                        padding: 5px;
+                        border: 2px solid rgba(white, 0);
+                        border-radius: 10px;
+                    }
+
+                    h2{
+                        text-align: center;
+                        font-size: 11px;
+                        width: 100%;
+                        letter-spacing: -0.01px;
+                        margin-top: 5px;
+                        color: rgba(black, 0.5);
+                        font-weight: 300;
+                        display: none;
+
+                    }
+
+                    &.active{
+                        img{
+                           // filter: hue-rotate(30deg) brightness(80%) contrast(130%) saturate(200%);
+                           border: 2px solid #6355FF;
+                        }
+                    }
+                }
+                */
+
+                .option-theme{
+                    font-size: 14px;
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    font-weight: 600;
+                    width: fit-content;
+                    background: rgba(black, 0.08);
                     cursor: pointer;
                     &.active{
                         background: #6355FF;
@@ -187,7 +289,6 @@ input{
                     }
                 }
             }
-
 
             .color{
                 height: 24px;
@@ -199,6 +300,34 @@ input{
             input{
                 color: black;
             }
+
+            .toggle{
+                margin-top: 5px;
+                background: #d0d0d0;
+                height: 25px;
+                width: 40px !important;
+                padding: 0 !important;
+                position: relative;
+                transition: 0.2s ease;
+                border-radius: 20px;
+                .nub{
+                    position: absolute;
+                    top: 4.5px;
+                    left: 4.5px;
+                    background: white;
+                    height: 16px;
+                    width: 16px;
+                    border-radius: 50%;
+                    transition: 0.2s ease;
+                }
+                &.active{
+                    background: #6355FF;
+                    .nub{
+                        top: 4.5px;
+                        left: 19.5px;
+                    }
+                }
+            }
         }
 
         #apply{
@@ -209,9 +338,14 @@ input{
         }
     }
 
-
-
 }
+
+
+// TOGGLE
+
+/* The switch - the box around the slider */
+
+//
 
 
 // Mobile
