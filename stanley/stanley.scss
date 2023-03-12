@@ -74,6 +74,10 @@ input{
 
 @media screen and (min-width: 800px) {
 
+    #mobile{
+        display: none;
+    }
+
     #navbar{
         position: fixed;
         width: 220px;
@@ -315,4 +319,32 @@ input{
         }
     }
 
+}
+
+
+@media screen and (max-width: 800px) {
+
+    html{
+        overflow: hidden;
+    }
+
+    #mobile{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        p{
+            width: 80%;
+            font-weight: 200;
+            text-align: center;
+        }
+    }
 }
