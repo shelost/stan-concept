@@ -183,7 +183,7 @@ input {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     width: 80%;
     max-width: 600px;
   }
@@ -217,7 +217,7 @@ input {
   #default .questions .question {
     background: #EEF1F5;
     width: 39%;
-    margin: 1.5%;
+    margin: 1%;
     padding: 4%;
     border-radius: 10px;
     -webkit-transition: 0.1s ease;
@@ -230,9 +230,6 @@ input {
         -ms-flex-align: end;
             align-items: flex-end;
     gap: 10px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
   }
   #default .questions .question p {
     font-size: 14px;
@@ -258,7 +255,7 @@ input {
     color: #808Eb6;
     border-radius: 10px;
     margin: 10px;
-    margin-top: 40px;
+    margin-top: 30px;
     line-height: 20px;
   }
   #area {

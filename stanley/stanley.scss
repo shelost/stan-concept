@@ -134,7 +134,7 @@ input{
         justify-content: center;
         flex: 1;
 
-        margin-bottom: 25px;
+        margin-bottom: 30px;
 
 
         width: 80%;
@@ -165,7 +165,7 @@ input{
             .question{
                 background: #EEF1F5;
                 width: 39%;
-                margin: 1.5%;
+                margin: 1%;
                 padding: 4%;
                 border-radius: 10px;
                 transition: 0.1s ease;
@@ -174,7 +174,7 @@ input{
                 display: flex;
                 align-items: flex-end;
                 gap: 10px;
-                height: fit-content;
+               // height: fit-content;
                 p{
                     font-size: 14px;
                     font-weight: 500;
@@ -200,7 +200,7 @@ input{
             color: #808Eb6;
             border-radius: 10px;
             margin: 10px;
-            margin-top: 40px;
+            margin-top: 30px;
             line-height: 20px;
         }
     }
