@@ -62,6 +62,10 @@ function trim(arg){
 }
 
 
+function trim2(arg) {
+    return arg.split("  ").join("")
+}
+
 
 
 
