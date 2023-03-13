@@ -30,8 +30,8 @@ input {
     opacity: 1;
   }
   100% {
-    top: 1.7999999999999998px;
-    left: 1.7999999999999998px;
+    top: 1.8px;
+    left: 1.8px;
     width: 99.6px;
     height: 99.6px;
     opacity: 0;
@@ -47,34 +47,12 @@ input {
     opacity: 1;
   }
   100% {
-    top: 1.7999999999999998px;
-    left: 1.7999999999999998px;
+    top: 1.8px;
+    left: 1.8px;
     width: 99.6px;
     height: 99.6px;
     opacity: 0;
   }
-}
-
-.ripple div {
-  position: absolute;
-  border-width: 8.4px;
-  border-style: solid;
-  opacity: 1;
-  border-radius: 50%;
-  -webkit-animation: ripple 1.20482s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-          animation: ripple 1.20482s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-
-.ripple div:nth-child(1) {
-  border-color: #6355ff;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-.ripple div:nth-child(2) {
-  border-color: #6355ff;
-  -webkit-animation-delay: -0.6024096385542168s;
-          animation-delay: -0.6024096385542168s;
 }
 
 .loadingio-spinner-ripple {
@@ -95,12 +73,30 @@ input {
           backface-visibility: hidden;
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
-  /* see note above */
 }
 
 .ripple div {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  position: absolute;
+  border-width: 8.4px;
+  border-style: solid;
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-animation: ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+          animation: ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.ripple div:nth-child(1) {
+  border-color: #6355ff;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.ripple div:nth-child(2) {
+  border-color: #6355ff;
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
 }
 
 @media screen and (min-width: 800px) {
@@ -215,6 +211,9 @@ input {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
   }
   #default .questions .question {
@@ -252,6 +251,7 @@ input {
     background: #DAE0EA;
   }
   #default #disclaimer {
+    width: 80%;
     font-size: 14px;
     background: #F2F4F8;
     padding: 20px;
