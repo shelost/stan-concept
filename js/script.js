@@ -1,7 +1,3 @@
-
-// style="--animation-order: ${counter};"
-
-
 let counter = 1
 let unsplash = 1
 
@@ -19,7 +15,6 @@ for (let i = 0; i < SECTIONS.length; i++){
         </div>
 
         <div class = 'products ${s.layout}'>
-
     `
 
     for (let j = 0; j < PRODUCTS.length; j++){
@@ -72,43 +67,15 @@ for (let i = 0; i < SECTIONS.length; i++){
     section +=
 
     `
-
         </div>
     </div>
     `
 
     Id('sections').innerHTML = Id('sections').innerHTML + section
-
-
 }
-
-
-/*
-for (let i = 22; i < Tag("*").length; i++){
-
-    let t = Tag('*')[i]
-
-    console.log(t)
-
-    //t.style.setProperty('--animation-order', counter)
-
-    console.log(t.style)
-    counter++
-
-
-    t.style.animationName = 'float-in';
-    t.style.animationDuration = '1000ms';
-    t.style.animationDelay = 'calc(var(--animation-order) * 100ms)';
-    t.style.animationFillMode = 'both';
-    t.style.animationTimingFunction = 'ease-in-out';
-}
-*/
-
 
 for (let i = 0; i < Class('anim').length; i++){
-
     let t = Class('anim')[i]
-
     t.style.setProperty('--animation-order', counter)
     t.style.transition = '0.2s ease';
     t.style.animationName = 'float-in';
@@ -116,21 +83,14 @@ for (let i = 0; i < Class('anim').length; i++){
     t.style.animationDelay = 'calc(var(--animation-order) * 10ms)';
     t.style.animationFillMode = 'both';
     t.style.animationTimingFunction = 'ease';
-
     counter++
 }
 
 
-
-
 let slider = 1
-
 let slide =
 
     `
-
-
-
             <div class = 'slide-header'>
 
                 <div class = 'url'>
@@ -184,18 +144,12 @@ let slide =
                     Purchase ->
                 </button>
             </div>
-
-
 `
-
 
 
 let frame =
 
     `
-
-
-
             <div class = 'slide-header frame-header'>
 
                 <div class = 'url'>
@@ -212,110 +166,3 @@ let frame =
             <iframe src = 'https://heewon.site/'>
 
 `
-
-
-/*
-
-
-Id('plus').onclick = () => {
-
-    let node = document.createElement('div')
-    node.classList.add('slide')
-
-    node.innerHTML = slide
-
-    let div = Id('slides')
-
-    Id('slides').appendChild(node)
-
-    Id('main').scrollTo({
-        top: 0,
-        left: 100000,
-        behavior: 'smooth'
-    })
-
-
-    console.log(div.scrollLeft)
-
-    slider++
-
-}
-
-
-
-
-
-let loop = () => {
-
-
-
-    for (let i = 0; i < Class('bars').length; i++){
-        let b = Class('bars')[i]
-
-        b.onclick = () => {
-            if (b.classList.contains('active')) {
-                let slide = b.parentElement.parentElement
-
-                console.log(slide)
-
-
-                slide.style.animation = 'remove 1s ease'
-
-                setTimeout(() => {
-                    slide.remove()
-                }, 500);
-            }
-            b.classList.toggle('active')
-        }
-    }
-
-
-    for (let i = 0; i < Class('card').length; i++) {
-
-        let c = Class('card')[i]
-
-
-        c.onclick = () => {
-
-            let node = document.createElement('div')
-            node.classList.add('slide')
-
-            if (c.classList.contains('url')) {
-                node.innerHTML = frame
-            } else {
-                node.innerHTML = slide
-            }
-
-
-            let div = Id('slides')
-
-            Id('slides').appendChild(node)
-
-            Id('main').scrollTo({
-                top: 0,
-                left: 100000,
-                behavior: 'smooth'
-            })
-
-
-            console.log(div.scrollLeft)
-
-            slider++
-        }
-
-    }
-
-
-
-
-
-
-
-
-    window.requestAnimationFrame(loop)
-}
-
-window.requestAnimationFrame(loop)
-
-
-*/

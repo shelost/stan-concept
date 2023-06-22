@@ -1,11 +1,10 @@
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: black;
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
@@ -31,43 +30,17 @@ input {
     height: 100vh;
     background: #eaeaed;
     background: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: flex-start;
+    align-items: center;
     overflow-x: scroll;
-  }
-  @-webkit-keyframes slider {
-    from {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-    to {
-      -webkit-transform: scale(80);
-              transform: scale(80);
-    }
   }
   @keyframes slider {
     from {
-      -webkit-transform: scale(1);
-              transform: scale(1);
+      transform: scale(1);
     }
     to {
-      -webkit-transform: scale(80);
-              transform: scale(80);
-    }
-  }
-  @-webkit-keyframes slide-up {
-    from {
-      top: 100vh;
-    }
-    to {
-      top: 0;
+      transform: scale(80);
     }
   }
   @keyframes slide-up {
@@ -80,15 +53,9 @@ input {
   }
   #slides {
     width: 100vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   .screen {
     width: 50vh;
@@ -98,25 +65,13 @@ input {
     overflow-x: hidden;
   }
   .slide {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-flex: 0.001;
-        -ms-flex-positive: 0.001;
-            flex-grow: 0.001;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0.001;
     position: relative;
-    -webkit-animation: float-up 0.4s ease;
-            animation: float-up 0.4s ease;
+    animation: float-up 0.4s ease;
     width: 50vh;
     height: 100%;
   }
@@ -128,34 +83,18 @@ input {
     top: 50%;
   }
   .slide-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
   }
   .slide-header .bars {
     width: 40px;
     height: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: 0.2s ease;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: 0.2s ease;
   }
   .slide-header .bars .bar {
@@ -163,7 +102,6 @@ input {
     height: 2px;
     margin: 4px 0;
     background: rgba(0, 0, 0, 0.4);
-    -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
   }
   .slide-header .bars.active {
@@ -174,27 +112,20 @@ input {
     background: red;
   }
   .slide-header .bars.active .one {
-    -webkit-transform: rotate(45deg) translate(4px, 4px);
-            transform: rotate(45deg) translate(4px, 4px);
+    transform: rotate(45deg) translate(4px, 4px);
   }
   .slide-header .bars.active .two {
-    -webkit-transform: rotate(-45deg) translate(4px, -4px);
-            transform: rotate(-45deg) translate(4px, -4px);
+    transform: rotate(-45deg) translate(4px, -4px);
   }
   .slide-header .url {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     gap: 10px;
     height: 50px;
   }
   .slide-header .url h3 {
     color: rgba(0, 0, 0, 0.2);
     margin: 0;
-    -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
     cursor: pointer;
   }
@@ -210,8 +141,7 @@ input {
     font-weight: 600;
   }
   #controls {
-    -webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
     background: white;
     padding: 10px 20px;
     border-radius: 20px;
@@ -220,12 +150,8 @@ input {
     z-index: 2;
   }
   #controls .control {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
     margin: 20px;
   }
   #controls .control#c-theme {
@@ -235,63 +161,56 @@ input {
     font-size: 14px;
     width: 100px;
     font-weight: 400;
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
+    transform: translateY(-3px);
   }
   #controls .control .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
     gap: 10px;
     /*
 
-                .option{
-                   // background: rgba(black, 0.08);
-                   // padding: 10px 15px;
-                   // border-radius: 20px;
+    .option{
+       // background: rgba(black, 0.08);
+       // padding: 10px 15px;
+       // border-radius: 20px;
 
 
-                    cursor: pointer;
+        cursor: pointer;
 
 
-                    img{
-                        width: 60px;
-                        padding: 5px;
-                        border: 2px solid rgba(white, 0);
-                        border-radius: 10px;
-                    }
+        img{
+            width: 60px;
+            padding: 5px;
+            border: 2px solid rgba(white, 0);
+            border-radius: 10px;
+        }
 
-                    h2{
-                        text-align: center;
-                        font-size: 11px;
-                        width: 100%;
-                        letter-spacing: -0.01px;
-                        margin-top: 5px;
-                        color: rgba(black, 0.5);
-                        font-weight: 300;
-                        display: none;
+        h2{
+            text-align: center;
+            font-size: 11px;
+            width: 100%;
+            letter-spacing: -0.01px;
+            margin-top: 5px;
+            color: rgba(black, 0.5);
+            font-weight: 300;
+            display: none;
 
-                    }
+        }
 
-                    &.active{
-                        img{
-                           // filter: hue-rotate(30deg) brightness(80%) contrast(130%) saturate(200%);
-                           border: 2px solid #6355FF;
-                        }
-                    }
-                }
-                */
+        &.active{
+            img{
+               // filter: hue-rotate(30deg) brightness(80%) contrast(130%) saturate(200%);
+               border: 2px solid #6355FF;
+            }
+        }
+    }
+    */
   }
   #controls .control .row .option {
     background: rgba(0, 0, 0, 0.08);
     padding: 8px 15px;
     border-radius: 20px;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     cursor: pointer;
@@ -299,7 +218,6 @@ input {
   #controls .control .row .option h2 {
     margin: 0;
     font-size: 12px;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin-top: 4px;
@@ -313,7 +231,6 @@ input {
     padding: 15px 20px;
     border-radius: 10px;
     font-weight: 600;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     background: rgba(0, 0, 0, 0.08);
@@ -340,7 +257,6 @@ input {
     width: 40px !important;
     padding: 0 !important;
     position: relative;
-    -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
     border-radius: 20px;
   }
@@ -352,7 +268,6 @@ input {
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
   }
   #controls .control .toggle.active {
@@ -369,7 +284,6 @@ input {
     margin-top: 30px;
   }
 }
-
 /* The switch - the box around the slider */
 @media screen and (max-width: 800px) {
   #main {
@@ -379,15 +293,9 @@ input {
     width: 100vw;
     height: 100vh;
     background: #e5e5f0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #store {
     position: fixed;
@@ -398,42 +306,16 @@ input {
     overflow-y: scroll;
   }
 }
-
-@-webkit-keyframes float-up {
-  0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: none;
-            transform: none;
-    opacity: 1;
-  }
-}
-
 @keyframes float-up {
   0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    transform: translateY(30px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
     opacity: 1;
   }
 }
-
-@-webkit-keyframes remove {
-  from {
-    margin-right: 0;
-  }
-  to {
-    margin-right: 100%;
-  }
-}
-
 @keyframes remove {
   from {
     margin-right: 0;
@@ -441,5 +323,4 @@ input {
   to {
     margin-right: 100%;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

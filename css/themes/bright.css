@@ -1,12 +1,10 @@
 .bright .screen {
   background: #fdfdff;
   color: black;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   padding-bottom: 50px;
-  -webkit-box-shadow: 0px 60px 100px rgba(27, 28, 62, 0.1);
-          box-shadow: 0px 60px 100px rgba(27, 28, 62, 0.1);
+  box-shadow: 0px 60px 100px rgba(27, 28, 62, 0.1);
 }
-
 .bright input, .bright input:-webkit-autofill,
 .bright input:-webkit-autofill:hover,
 .bright input:-webkit-autofill:focus,
@@ -16,26 +14,18 @@
   background: rgba(0, 0, 0, 0.1);
   color: white;
   border-radius: 10px;
-  -webkit-box-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 .bright #store .header {
   width: 90%;
   padding: 20px 0;
   margin: auto;
 }
-
 .bright #store .header .mast {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 15px;
 }
-
 .bright #store .header .mast .pfp {
   width: 70px;
   height: 70px;
@@ -45,49 +35,36 @@
   border-radius: 15px;
   border: 2px solid #00F0FF;
 }
-
 .bright #store .header .mast .expo {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-
 .bright #store .header .mast .expo h1 {
   font-size: 22px;
   font-weight: 500;
   margin: 0;
   margin-bottom: 10px;
 }
-
 .bright #store .header .mast .expo .socials {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-
 .bright #store .header .mast .expo .socials img {
   width: 28px;
-  -webkit-filter: hue-rotate(50deg) invert(100%);
-          filter: hue-rotate(50deg) invert(100%);
+  filter: hue-rotate(50deg) invert(100%);
 }
-
 .bright #store .header .bio {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 15px;
   line-height: 150%;
   font-weight: 300;
   margin: 25px 0;
 }
-
 .bright #store .header .magnet {
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-
 .bright #store .header .magnet input, .bright #store .header .magnet input:-webkit-autofill,
 .bright #store .header .magnet input:-webkit-autofill:hover,
 .bright #store .header .magnet input:-webkit-autofill:focus,
@@ -97,21 +74,17 @@
   background: rgba(255, 255, 255, 0.1);
   color: white;
   border-radius: 10px;
-  -webkit-box-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 .bright #store .header .magnet button {
   padding: 0 20px;
   border-radius: 10px;
 }
-
 .bright #store .section {
   margin-top: 50px;
   width: 90%;
   margin: auto;
 }
-
 .bright #store .section .section-title {
   font-size: 20px;
   font-weight: 700;
@@ -121,76 +94,55 @@
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 .bright #store .grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 6%;
 }
-
 .bright #store .grid .card {
   width: 47%;
   margin-bottom: 20px;
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
-
 .bright #store .grid .card .thumbnail {
   width: 100%;
   aspect-ratio: 1;
   border-radius: 15px;
   background-size: cover;
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
-
 .bright #store .grid .card .expo h3 {
   margin-top: 15px;
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 500;
 }
-
 .bright #store .grid .card .expo p {
-  font-family: 'Inter';
+  font-family: "Inter";
   margin: 0;
   font-size: 12px;
   line-height: 140%;
   font-weight: 200;
 }
-
 .bright #store .grid .card:hover .thumbnail {
-  -webkit-transform: translateY(-5px) scale(1.02);
-          transform: translateY(-5px) scale(1.02);
+  transform: translateY(-5px) scale(1.02);
 }
-
 .bright #store .grid .price-row {
   margin-top: 15px;
 }
-
 .bright #store .grid .price-row .price {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
   color: #ffce00;
 }
-
 .bright #store .stack .card {
   width: 100%;
   margin-bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .bright #store .stack .card .thumbnail {
   width: 50px;
   aspect-ratio: 1;
@@ -198,32 +150,26 @@
   background-size: cover;
   margin-right: 10px;
 }
-
 .bright #store .stack .card .expo h3 {
   margin: 0;
   margin-bottom: 5px;
   font-size: 16px;
   font-weight: 300;
 }
-
 .bright #store .stack .card .expo p {
   display: none;
 }
-
 .bright #store .stack .card .price-row {
   margin-top: 0px;
 }
-
 .bright #store .stack .card .price-row .price {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
   color: #ffce00;
 }
-
 .bright #store #banner {
   text-align: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
@@ -233,13 +179,11 @@
   border-radius: 30px;
   opacity: 0.5;
 }
-
 .bright #store #banner h3 {
   font-size: 14px;
   font-weight: 300;
   margin: 0;
 }
-
 .bright .checkout .banner {
   width: 100%;
   aspect-ratio: 16/9;
@@ -247,62 +191,41 @@
   background-size: 100% 100%;
   background-position: 50% 0%;
 }
-
 .bright .checkout .expo {
   width: 88%;
   margin: auto;
   margin-top: 25px;
 }
-
 .bright .checkout .expo h1 {
   font-size: 22px;
   font-weight: 400;
   margin: 0;
   margin-bottom: 8px;
 }
-
 .bright .checkout .expo h2 {
   font-size: 18px;
   color: #ffce00;
   margin: 0;
 }
-
 .bright .checkout .description {
   width: 88%;
   margin: auto;
 }
-
 .bright .checkout .description p {
   width: 100%;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 200;
   font-size: 13px;
   line-height: 170%;
 }
 
-@-webkit-keyframes float-in {
-  0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: none;
-            transform: none;
-    opacity: 1;
-  }
-}
-
 @keyframes float-in {
   0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    transform: translateY(30px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
     opacity: 1;
   }
-}
-/*# sourceMappingURL=bright.css.map */
+}/*# sourceMappingURL=bright.css.map */

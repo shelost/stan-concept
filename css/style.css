@@ -1,11 +1,10 @@
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: black;
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
@@ -14,16 +13,14 @@ body {
 }
 
 button {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   outline: none;
   border: none;
   background: #0059ff;
   color: white;
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   cursor: pointer;
 }
-
 button:hover {
   background: #003cff;
 }
@@ -45,15 +42,9 @@ input {
     width: 100vw;
     height: 100vh;
     background: #eaeaed;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: flex-start;
+    align-items: center;
     gap: 40px;
     overflow-x: scroll;
     padding: 0 50px;
@@ -62,8 +53,7 @@ input {
     background: rgba(0, 0, 0, 0.1);
     text-align: center;
     line-height: 80px;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
+    flex-shrink: 0;
     z-index: 10;
     font-size: 50px;
     width: 100px;
@@ -73,22 +63,15 @@ input {
     font-weight: 400;
     border-radius: 30px;
     cursor: pointer;
-    -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
   }
   #plus:hover {
     background: rgba(0, 0, 0, 0.2);
   }
   #slides {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: flex-start;
+    align-items: center;
     gap: 40px;
   }
   .screen {
@@ -106,26 +89,14 @@ input {
     background: white;
   }
   .slide {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-flex: 0.001;
-        -ms-flex-positive: 0.001;
-            flex-grow: 0.001;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0.001;
     position: relative;
     padding-bottom: 20px;
-    -webkit-animation: float-up 0.6s ease;
-            animation: float-up 0.6s ease;
+    animation: float-up 0.6s ease;
   }
   .line {
     font-size: 30px;
@@ -135,34 +106,18 @@ input {
     top: 50%;
   }
   .slide-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
   }
   .slide-header .bars {
     width: 40px;
     height: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: 0.2s ease;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: 0.2s ease;
   }
   .slide-header .bars .bar {
@@ -170,7 +125,6 @@ input {
     height: 2px;
     margin: 4px 0;
     background: rgba(0, 0, 0, 0.4);
-    -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
   }
   .slide-header .bars.active {
@@ -181,27 +135,20 @@ input {
     background: red;
   }
   .slide-header .bars.active .one {
-    -webkit-transform: rotate(45deg) translate(4px, 4px);
-            transform: rotate(45deg) translate(4px, 4px);
+    transform: rotate(45deg) translate(4px, 4px);
   }
   .slide-header .bars.active .two {
-    -webkit-transform: rotate(-45deg) translate(4px, -4px);
-            transform: rotate(-45deg) translate(4px, -4px);
+    transform: rotate(-45deg) translate(4px, -4px);
   }
   .slide-header .url {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     gap: 10px;
     height: 50px;
   }
   .slide-header .url h3 {
     color: rgba(0, 0, 0, 0.2);
     margin: 0;
-    -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
     cursor: pointer;
   }
@@ -217,7 +164,6 @@ input {
     font-weight: 600;
   }
 }
-
 @media screen and (max-width: 800px) {
   #main {
     position: fixed;
@@ -226,15 +172,9 @@ input {
     width: 100vw;
     height: 100vh;
     background: #e5e5f0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #store {
     position: fixed;
@@ -245,42 +185,16 @@ input {
     overflow-y: scroll;
   }
 }
-
-@-webkit-keyframes float-up {
-  0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: none;
-            transform: none;
-    opacity: 1;
-  }
-}
-
 @keyframes float-up {
   0% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    transform: translateY(30px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
     opacity: 1;
   }
 }
-
-@-webkit-keyframes remove {
-  from {
-    margin-right: 0;
-  }
-  to {
-    margin-right: 100%;
-  }
-}
-
 @keyframes remove {
   from {
     margin-right: 0;
@@ -288,5 +202,4 @@ input {
   to {
     margin-right: 100%;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
