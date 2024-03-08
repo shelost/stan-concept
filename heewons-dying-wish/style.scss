@@ -1,0 +1,253 @@
+
+body{
+    color: #00106D;
+}
+
+button{
+    background: #6355FF;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 12px 18px;
+    font-family: Plus Jakarta Sans, Inter, sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+
+    margin: 10px;
+
+    transition: 0.2s ease;
+    cursor: pointer;
+
+    &:hover{
+        background: #5200ff;
+    }
+}
+
+#container{
+    padding: 20px;
+    overflow-y: scroll;
+    padding-bottom: 100px;
+    height: calc(100vh - 180px);
+}
+
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: #EBEDFF;
+
+
+    .navbtn{
+        border-radius: 0 40px 40px 0;
+        width: 200px;
+        transition: 0.2s ease;
+        cursor: pointer;
+
+        h1{
+            font-size: 16px;
+            padding: 14px;
+            margin: 0;
+        }
+
+        &:hover{
+            background: #d9dcff;
+        }
+
+        &.active{
+            background: #6355ff;
+            color: white;
+        }
+    }
+}
+
+
+#main{
+    position: fixed;
+    top: 0;
+    left: 220px;
+    width: calc(100vw - 220px);
+}
+
+
+h1, h2{
+    font-family: Plus Jakarta Sans, Inter, sans-serif;
+}
+
+#top{
+    border: 1px solid rgba(black, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+
+    h1{
+        margin: 0;
+        font-size: 18px;
+    }
+    h2{
+        margin: 0;
+        font-size: 16px;
+        color: #6355FF;
+    }
+}
+
+#tabs {
+    position: relative;
+    display: flex;
+
+    .tab {
+      border: 1.5px solid white;
+      border-radius: 30px;
+      transition: 0.15s ease;
+      cursor: pointer;
+
+      h2 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px 20px;
+        transition: 0s ease; // Smooth color transition
+      }
+
+      &:hover{
+        color: #6355ff;
+      }
+
+      &.active{
+        color: #6355ff;
+      }
+    }
+
+    #pill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 110px;
+      height: 40px; // Adjust based on your design
+      border: 1.5px solid #6355ff;
+      border-radius: 50px;
+      transition: 0.2s ease; // Smooth transition for movement and resizing
+    }
+  }
+
+
+
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    transition: 0.2s ease;
+    background: rgba(black, 0); // Start with a transparent background
+    visibility: hidden; // Initially hidden
+    opacity: 0; // Start fully transparent
+
+    #modal {
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        min-height: 200px;
+        box-shadow: 0 70px 100px rgba(black, 0.25);
+        transform: scale(0.7) translateY(100px);
+        background: white;
+        border-radius: 15px;
+        width: 540px;
+        padding: 20px; // Added padding for content inside modal
+        opacity: 0; // Start fully transparent
+
+        h1 {
+            font-size: 18px;
+            padding-top: 0px; // Adjusted to 0px, assuming it was a typo in the original code
+        }
+
+        h2 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #808EB6;
+        }
+
+        button {
+            width: 90%;
+            transition: 0.2s ease;
+        }
+    }
+
+    &.active {
+        pointer-events: all;
+        background: rgba(black, 0.7); // Darken background when active
+        visibility: visible; // Make overlay visible
+        opacity: 1; // Fade to fully visible
+
+        #modal {
+            opacity: 1;
+            visibility: visible; // Make modal visible
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    // Example animation modifications for different buttons
+    &.animation1 #modal {
+        animation: customAnimation1 0.4s ease forwards;
+    }
+    &.animation2 #modal {
+        animation: customAnimation2 0.3s forwards;
+    }
+    &.animation3 #modal {
+        animation: customAnimation3 0.5s forwards;
+    }
+    &.animation4 #modal {
+        animation: customAnimation4 0.4s forwards;
+    }
+}
+
+// Example keyframes for custom animations
+@keyframes customAnimation1 {
+    from { transform: scale(0.7) translateY(150px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+@keyframes customAnimation2 {
+    from { transform: scale(0.9) translateY(10px); opacity: 0; }
+    to { transform: scale(1) translateX(0); opacity: 1; }
+}
+
+@keyframes customAnimation3 {
+    from { transform: scale(0.5) rotate(-360deg); opacity: 0; }
+    to { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes customAnimation4 {
+    from { transform: scale(1) translateY(50vw); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+
+#chartContainer{
+    height: 200px;
+    width: 50vw;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    //box-shadow: 0 20px 60px rgba(#00106d, 0.1), inset 0 -10px 15px 4px rgba(#00106d, 0.01);
+
+
+    #tickerContainer{
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        font-family: Inter, sans-serif;
+        margin-bottom: 40px;
+    }
+}
+
+

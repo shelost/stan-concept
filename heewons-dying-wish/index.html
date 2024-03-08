@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Animations </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href = 'style.css' rel = 'stylesheet'>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <div id = 'navbar'>
+
+        <div class = 'navbtn active'>
+            <h1> Home </h1>
+        </div>
+
+        <div class = 'navbtn'>
+            <h1> About </h1>
+        </div>
+
+        <div class = 'navbtn'>
+            <h1> Settings </h1>
+        </div>
+
+    </div>
+
+
+    <div id = 'main'>
+
+
+        <div id = 'top'>
+            <h1> My Store </h1>
+
+            <h2> stan.store/vitddnv </h2>
+        </div>
+
+
+        <div id = 'container'>
+
+
+            <h2> Modal </h2>
+
+            <div class = 'buttons'>
+                <button class='modal-btn' data-animation='animation1'> Float </button>
+                <button class='modal-btn' data-animation='animation2'> Appear </button>
+                <button class='modal-btn' data-animation='animation3'> Spin! </button>
+                <button class='modal-btn' data-animation='animation4'> Slide Up </button>
+            </div>
+
+
+
+            <h2> Tabs </h2>
+
+            <div id='tabs'>
+                <div id='pill'></div>
+                <div class='tab active' onclick="movePill(this)">
+                    <h2>Navigate</h2>
+                </div>
+                <div class='tab' onclick="movePill(this)">
+                    <h2>Between</h2>
+                </div>
+                <div class='tab' onclick="movePill(this)">
+                    <h2>Tabs</h2>
+                </div>
+            </div>
+
+
+            <h2> Chart </h2>
+
+            <div id="chartContainer">
+                <div id="tickerContainer">$0.00</div>
+                <canvas id="lineChart" onmouseout="handleMouseOut()"></canvas>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <div id = 'overlay' class = ''>
+
+        <div id = 'modal'>
+
+
+            <h1> Just Confirming! </h1>
+
+            <h2> Are you sure you want to send this email? </h2>
+
+            <button id = 'confirm'> Confirm </button>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src = '../js/functions.js'> </script>
+<script src = 'script.js'> </script>
+
+</html>
