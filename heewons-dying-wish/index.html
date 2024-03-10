@@ -17,15 +17,20 @@
 
     <div id = 'navbar'>
 
+        <img id = 'logo' src = '../assets/logo-text.svg'>
+
         <div class = 'navbtn active'>
+            <img src = '../assets/id=Home.svg'>
             <h1> Home </h1>
         </div>
 
         <div class = 'navbtn'>
+            <img src = '../assets/id=Heart.svg'>
             <h1> About </h1>
         </div>
 
         <div class = 'navbtn'>
+            <img src = '../assets/id=Settings.svg'>
             <h1> Settings </h1>
         </div>
 
@@ -45,40 +50,109 @@
         <div id = 'container'>
 
 
-            <h2> Modal </h2>
+            <div class = 'col' id = 'left'>
 
-            <div class = 'buttons'>
-                <button class='modal-btn' data-animation='animation1'> Float </button>
-                <button class='modal-btn' data-animation='animation2'> Appear </button>
-                <button class='modal-btn' data-animation='animation3'> Spin! </button>
-                <button class='modal-btn' data-animation='animation4'> Slide Up </button>
+                <div id="chartContainer">
+                    <div id = 'label'>
+                        <h2> Income </h2>
+                        <h1 id="tickerContainer">$0.00</h1>
+                    </div>
+                    <canvas id="lineChart" onmouseout="handleMouseOut()"></canvas>
+                </div>
+
+
+                <h2 class = 'title'> Sortable </h2>
+
             </div>
 
 
+            <div class = 'col' id = 'right'>
 
-            <h2> Tabs </h2>
 
-            <div id='tabs'>
-                <div id='pill'></div>
-                <div class='tab active' onclick="movePill(this)">
-                    <h2>Navigate</h2>
+                <h2 class = 'title'> Modal </h2>
+
+                <div class = 'buttons'>
+
+                    <button class='modal-btn btn' data-animation='animation1'>
+                        <img src = '../assets/icon-float.svg'>
+                        <h4>
+                            Float
+                        </h4>
+                    </button>
+
+                    <button class='modal-btn btn' data-animation='animation2'>
+                        <img src = '../assets/icon-appear.svg'>
+                        <h4>
+                            Appear
+                        </h4>
+                    </button>
+
+                    <button class='modal-btn btn' data-animation='animation3'>
+                        <img src = '../assets/icon-spin.svg'>
+                        <h4>
+                            Spin
+                        </h4>
+                    </button>
+
+                    <button class='modal-btn btn' data-animation='animation4'>
+                        <img src = '../assets/icon-slide.svg'>
+                        <h4>
+                            Slide Up
+                        </h4>
+                    </button>
+
+                    <button class='modal-btn btn' data-animation='animation4'> Throw </button>
                 </div>
-                <div class='tab' onclick="movePill(this)">
-                    <h2>Between</h2>
+
+
+
+                <h2 class = 'title'> Tabs </h2>
+
+                <div id='tabs'>
+                    <div id='pill'></div>
+                    <div class='tab active' onclick="movePill(this)">
+                        <img src = '../assets/id=Design.svg'>
+                        <h2>Navigate</h2>
+                    </div>
+                    <div class='tab' onclick="movePill(this)">
+                        <img src = '../assets/id=Conversion.svg'>
+                        <h2>Between</h2>
+                    </div>
+                    <div class='tab' onclick="movePill(this)">
+                        <img src = '../assets/id=Store.svg'>
+                        <h2>Tabs</h2>
+                    </div>
                 </div>
-                <div class='tab' onclick="movePill(this)">
-                    <h2>Tabs</h2>
+
+
+                <h2 class = 'title'> Toast </h2>
+
+                <div class = 'buttons'>
+
+                    <button class='toast-btn btn' data-position='top-center'>
+                        <img src = '../assets/top-center.svg'>
+                        <h4>
+                            Top Center
+                        </h4>
+                    </button>
+
+                    <button class='toast-btn btn' data-position='top-right'>
+                        <img src = '../assets/top-right.svg'>
+                        <h4>
+                            Top Right
+                        </h4>
+                    </button>
+
+                    <button class='toast-btn btn' data-position='bottom-right'>
+                        <img src = '../assets/bottom-right.svg'>
+                        <h4>
+                            Bottom Right
+                        </h4>
+                    </button>
+
                 </div>
+
             </div>
-
-
-            <h2> Chart </h2>
-
-            <div id="chartContainer">
-                <div id="tickerContainer">$0.00</div>
-                <canvas id="lineChart" onmouseout="handleMouseOut()"></canvas>
-            </div>
-
 
 
         </div>
@@ -86,14 +160,27 @@
     </div>
 
 
+    <div id="toast-container-top-center" class="toast-container"></div>
+    <div id="toast-container-top-right" class="toast-container"></div>
+    <div id="toast-container-bottom-right" class="toast-container"></div>
+
+
+
+
     <div id = 'overlay' class = ''>
 
         <div id = 'modal'>
 
+            <div id = 'header'>
+                <h1> Just Confirming! </h1>
+                <h2> Are you sure you want to send this email? </h2>
+            </div>
 
-            <h1> Just Confirming! </h1>
+            <div id = 'stanley'>
+                <img src = '../assets/stanley1.png'>
+                <img src = '../assets/stanley2.png' id = 'hand'>
+            </div>
 
-            <h2> Are you sure you want to send this email? </h2>
 
             <button id = 'confirm'> Confirm </button>
 
@@ -103,6 +190,11 @@
 
 
 </body>
+
+
+<script src="
+https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js
+"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src = '../js/functions.js'> </script>

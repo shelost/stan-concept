@@ -7,13 +7,33 @@ button {
   color: white;
   outline: none;
   border: none;
-  padding: 12px 18px;
+  padding: 12px 18px 12px 15px;
   font-family: Plus Jakarta Sans, Inter, sans-serif;
   font-weight: 600;
   border-radius: 8px;
-  margin: 10px;
-  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 5px 10px rgba(0, 16, 109, 0.1), inset 2px -3px 7px rgba(0, 16, 109, 0.05), inset -2px 3px 5px rgba(255, 255, 255, 0.1);
+  transition: 0.2s ease-in-out;
   cursor: pointer;
+}
+button img {
+  height: 18px;
+  width: 18px;
+  filter: invert(100%);
+  opacity: 0.8;
+}
+button h4 {
+  margin: 0;
+  font-family: Plus Jakarta Sans, Inter, sans-serif;
+  font-weight: 500;
+}
+button.up {
+  transform: translateY(-10px) scale(1.01);
+  background: #5200ff;
+  box-shadow: 0 15px 10px rgba(0, 16, 109, 0.1), inset 2px -3px 7px rgba(0, 16, 109, 0.05), inset -2px 3px 5px rgba(255, 255, 255, 0.1);
 }
 button:hover {
   background: #5200ff;
@@ -21,9 +41,52 @@ button:hover {
 
 #container {
   padding: 20px;
+  width: calc(100vw - 270px);
   overflow-y: scroll;
+  overflow-x: visible;
   padding-bottom: 100px;
   height: calc(100vh - 180px);
+  display: flex;
+  gap: 20px;
+}
+
+#chartContainer canvas {
+  width: auto !important;
+  max-width: 100%; /* Ensures canvas does not overflow its container */
+  max-height: 100%; /* Optional, depending on desired aspect ratio */
+}
+
+.col {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.col .title {
+  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  font-size: 18px;
+}
+.col .title:first-child {
+  margin-top: 0;
+}
+
+#left {
+  flex: 1;
+}
+
+#right {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 320px;
+  box-shadow: 0 15px 40px rgba(0, 16, 109, 0.1);
+}
+#right .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 #navbar {
@@ -34,15 +97,27 @@ button:hover {
   height: 100vh;
   background: #EBEDFF;
 }
+#navbar #logo {
+  width: 90px;
+  padding: 25px 15px;
+}
 #navbar .navbtn {
   border-radius: 0 40px 40px 0;
-  width: 200px;
-  transition: 0.2s ease;
+  width: 165px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  padding-left: 20px;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+#navbar .navbtn img {
+  width: 20px;
 }
 #navbar .navbtn h1 {
   font-size: 16px;
-  padding: 14px;
+  font-weight: 600;
   margin: 0;
 }
 #navbar .navbtn:hover {
@@ -51,6 +126,10 @@ button:hover {
 #navbar .navbtn.active {
   background: #6355ff;
   color: white;
+  box-shadow: 3px 5px 10px rgba(0, 16, 109, 0.15), inset -2px -3px 10px rgba(0, 16, 109, 0.2), inset 2px 3px 10px rgba(255, 255, 255, 0.1);
+}
+#navbar .navbtn.active img {
+  filter: invert(100%) brightness(200%);
 }
 
 #main {
@@ -65,7 +144,7 @@ h1, h2 {
 }
 
 #top {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(128, 142, 182, 0.4);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,7 +153,9 @@ h1, h2 {
 }
 #top h1 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
 }
 #top h2 {
   margin: 0;
@@ -89,33 +170,61 @@ h1, h2 {
 #tabs .tab {
   border: 1.5px solid white;
   border-radius: 30px;
-  transition: 0.15s ease;
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  gap: 6px;
   cursor: pointer;
+}
+#tabs .tab img {
+  height: 18px;
 }
 #tabs .tab h2 {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  padding: 10px 20px;
   transition: 0s ease;
 }
 #tabs .tab:hover {
   color: #6355ff;
+  background: rgba(99, 85, 255, 0.1);
+}
+#tabs .tab:hover img {
+  filter: hue-rotate(15deg) saturate(400%);
 }
 #tabs .tab.active {
   color: #6355ff;
+}
+#tabs .tab.active img {
+  filter: hue-rotate(15deg) saturate(400%);
 }
 #tabs #pill {
   position: absolute;
   top: 0;
   left: 0;
-  width: 110px;
+  width: 115px;
   height: 40px;
   border: 1.5px solid #6355ff;
   border-radius: 50px;
   transition: 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 16, 109, 0.25);
+  cursor: pointer;
+}
+#tabs #pill:hover {
+  color: #6355ff;
+  background: rgba(99, 85, 255, 0.1);
 }
 
+@keyframes stanley {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(5px, 0) rotate(10deg);
+  }
+}
 #overlay {
   position: fixed;
   top: 0;
@@ -139,26 +248,54 @@ h1, h2 {
   transform: scale(0.7) translateY(100px);
   background: white;
   border-radius: 15px;
-  width: 540px;
-  padding: 20px;
+  width: 500px;
+  padding: 30px;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 #overlay #modal h1 {
   font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 16px;
   padding-top: 0px;
+  font-weight: 700;
 }
 #overlay #modal h2 {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   color: #808EB6;
+  font-family: Inter, sans-serif;
+  letter-spacing: -0.2px;
+}
+#overlay #modal #stanley {
+  height: 250px;
+  width: 250px;
+  margin: 20px 0 50px 0;
+  position: relative;
+}
+#overlay #modal img {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  top: 0;
+  left: 0;
+}
+#overlay #modal #hand {
+  animation: stanley 0.5s infinite alternate ease-in-out;
 }
 #overlay #modal button {
-  width: 90%;
+  width: 100%;
   transition: 0.2s ease;
+  font-size: 14px;
 }
 #overlay.active {
   pointer-events: all;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   visibility: visible;
   opacity: 1;
 }
@@ -220,17 +357,133 @@ h1, h2 {
     opacity: 1;
   }
 }
+#lineChart {
+  cursor: pointer !important;
+}
+
 #chartContainer {
-  height: 200px;
-  width: 50vw;
-  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  padding: 20px;
+  padding-bottom: 180px;
   background: white;
   border-radius: 15px;
 }
-#chartContainer #tickerContainer {
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: -1px;
+#chartContainer #label h2 {
+  margin: 0;
+  margin-bottom: 5px;
+  color: #808EB6;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+  font-weight: 400;
   font-family: Inter, sans-serif;
+}
+#chartContainer #label #tickerContainer {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin: 0;
   margin-bottom: 40px;
+  font-family: Inter, sans-serif;
+}
+
+.toast-container {
+  position: fixed;
+  z-index: 1000;
+}
+
+.toast-btn {
+  background: rgba(99, 85, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: none;
+  color: #6355FF;
+}
+.toast-btn h4 {
+  font-weight: 600;
+}
+.toast-btn img {
+  filter: none;
+}
+.toast-btn:hover {
+  background: rgba(99, 85, 255, 0.2);
+}
+.toast-btn.up {
+  transform: translateY(-10px) scale(1.01);
+  background: rgba(99, 85, 255, 0.2);
+  box-shadow: 0 15px 10px rgba(0, 16, 109, 0.05);
+}
+
+.toast {
+  background-color: rgb(218, 218, 255);
+  color: #00106D;
+  border-radius: 50px;
+  background-color: rgb(189, 254, 216);
+  color: #003a38;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  padding: 10px 10px 10px 20px;
+  margin: 8px;
+  opacity: 0;
+  box-shadow: 0 10px 20px rgba(0, 16, 109, 0.15);
+  border: 2px solid white;
+  transition: opacity 0.5s, transform 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toast img {
+  width: 22px;
+}
+.toast .toast-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.toast button {
+  background: none;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: #019065;
+  background: #e2fff5;
+  border-radius: 100px;
+  margin-left: 20px;
+  padding: 8px 12px;
+}
+.toast button:hover {
+  background: white;
+}
+
+/* Position-specific styles */
+#toast-container-top-center {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#toast-container-top-right {
+  top: 10px;
+  right: 10px;
+}
+
+#toast-container-bottom-right {
+  bottom: 20px;
+  right: 10px;
+}
+
+/* Animation-specific styles */
+.toast-slide-in-top-center {
+  transform: translateY(-100%);
+}
+
+.toast-slide-in-top-right {
+  transform: translateX(100%);
+}
+
+.toast-slide-in-bottom-right {
+  transform: translateX(100%);
 }/*# sourceMappingURL=style.css.map */
